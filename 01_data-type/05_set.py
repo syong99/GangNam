@@ -26,3 +26,43 @@ print(ohgiraffers)
 ohgiraffers.add('pig') # pig add
 
 print(ohgiraffers)
+
+# SET 메소드
+
+# 1. update() 
+ohgiraffers1 = set(["monkey", "tiger", 'wolf'])
+print(ohgiraffers1)
+ohgiraffers1.update(["monkey", 'tiger', 'wolf', 'squirrel'])
+print(ohgiraffers1)
+
+
+# 2. discord()
+ohgiraffers1.discard('pig')
+
+# 3. pop()
+ohgiraffers1.pop()
+print(ohgiraffers1)
+
+# 4. clear()
+ohgiraffers1.clear()
+print(ohgiraffers1)
+
+# 5. union() : 두 set 합집합
+
+javaTeam = {"gorilla", "tiger", "monkey"}
+pythonTeam = {'pig', "bear", "gorilla", "tiger"}
+
+ohgiraffers2 = javaTeam.union(pythonTeam)
+print(ohgiraffers2)
+
+# 6. interserction() : 두 set 자료형의 교집합을 반환
+print(javaTeam.intersection(pythonTeam))
+
+# 7. difference() : 좌향을 기준으로 우향의 차집합을 반환한다.
+print(javaTeam.difference(pythonTeam))
+
+# 8. copy() : 대상 set을 복사하여 반환한다.
+javaTeam1 = javaTeam.copy()
+print(javaTeam1)
+print(id(javaTeam))
+print(id(javaTeam1))
